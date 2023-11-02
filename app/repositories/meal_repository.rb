@@ -20,6 +20,7 @@ class MealRepository
     @meals
   end
 
+  # meal_repo.find(1) -> instance!
   def find(id)
     @meals.find { |meal| meal.id == id }
   end

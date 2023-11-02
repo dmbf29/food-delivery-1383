@@ -18,6 +18,12 @@ class EmployeeRepository
     @employees.find { |employee| employee.username == username }
   end
 
+  def all_riders
+    @employees.select do |employee|
+      employee.rider?
+    end
+  end
+
   private
 
   def save_csv
